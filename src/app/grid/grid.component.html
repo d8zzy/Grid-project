@@ -1,0 +1,12 @@
+<div class="mt-4">
+  <igx-grid
+    #grid1
+    [data]="localData"
+    [autoGenerate]="true"
+    (columnInit)="onColumnInit($event)"
+    width="960px"
+    height="550px"
+  >
+    <igx-paginator></igx-paginator>
+  </igx-grid>
+</div>
