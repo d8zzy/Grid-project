@@ -1,33 +1,52 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a
-          href=""
-          class="nav-link"
-          [href]="grid.url"
-          *ngFor="let grid of grids"
-          [ngClass]="{ active: router.url.includes(grid.link) }"
-          >{{ grid.link }}</a
-        >
-
-        <!-- <a class="nav-link active" aria-current="page" href="/grid1">Grid1</a>
-        <a class="nav-link" href="/grid2">Grid2</a>
-        <a class="nav-link" href="/grid3">Grid3</a>
-        <a class="nav-link" href="/grid4">Grid4</a> -->
-      </div>
+<header>
+  <div class="desk-view d-flex align-items-center justify-content-between">
+    <div class="menu d-flex align-items-center">
+      <ul>
+        <li><a href="/grid1">Grid1</a></li>
+        <li><a href="/grid2">Grid2</a></li>
+        <li><a href="/grid3">Grid3</a></li>
+        <li><a href="/grid4">Grid4</a></li>
+      </ul>
     </div>
   </div>
-</nav>
+
+  <div class="mb-res" #header [ngClass]="{ open: menu }">
+    <aside>
+      <div class="logo" routerLink="/">
+        <label class="fs-6">Navbar</label>
+      </div>
+
+      <span class="d-flex">
+        <img
+          src="/assets/close.svg"
+          (click)="toggleMenu()"
+          width="25px"
+          height="25px"
+          alt="logo"
+        />
+      </span>
+    </aside>
+
+    <nav class="nav-menu" [ngClass]="{ open: menu }">
+      <div class="d-flex align-items-center justify-content-between mb-5">
+        <div class="title">
+          <label class="fs-6">Navbar</label>
+        </div>
+        <img
+          src="/assets/close.svg"
+          (click)="toggleMenu()"
+          width="25px"
+          height="25px"
+          alt="logo"
+        />
+      </div>
+
+      <ul class="nav--links">
+        <li><a href="/grid1">Grid1</a></li>
+        <li><a href="/grid2">Grid2</a></li>
+        <li><a href="/grid3">Grid3</a></li>
+        <li><a href="/grid4">Grid4</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

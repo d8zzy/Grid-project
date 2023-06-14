@@ -10,6 +10,8 @@ import { HeaderComponent } from './header/header.component';
 import { Grid2Component } from './grid2/grid2.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Grid3Component } from './grid3/grid3.component';
+import { Grid4Component } from './grid4/grid4.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { FormsModule } from '@angular/forms';
     GridComponent,
     HeaderComponent,
     Grid2Component,
+    Grid3Component,
+    Grid4Component,
   ],
   imports: [
     BrowserModule,

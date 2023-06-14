@@ -1,0 +1,32 @@
+<div class="mt-4">
+  <div class="m-3 fs-5">Filtering</div>
+  <igx-grid
+    #grid1
+    [data]="localData"
+    [autoGenerate]="false"
+    (columnInit)="onColumnInit($event)"
+    width="100%"
+    height="650px"
+    [allowFiltering]="true"
+  >
+    <!-- <igx-paginator></igx-paginator> -->
+
+    <igx-column header="Employee ID" field="EmployeeID"></igx-column>
+
+    <igx-column header="First Name" field="FirstName"></igx-column>
+
+    <igx-column header="Last Name" field="LastName"></igx-column>
+
+    <igx-column header="Country" field="Country"></igx-column>
+
+    <igx-column header="Age" field="Age" dataType="number"></igx-column>
+
+    <igx-column
+      header="Registerer Date"
+      field="RegistererDate"
+      [dataType]="'date'"
+    ></igx-column>
+
+    <igx-column header="Active" field="IsActive"></igx-column>
+  </igx-grid>
+</div>
