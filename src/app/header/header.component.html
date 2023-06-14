@@ -14,10 +14,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="/grid1">Grid1</a>
+        <a
+          href=""
+          class="nav-link"
+          [href]="grid.url"
+          *ngFor="let grid of grids"
+          [ngClass]="{ active: router.url.includes(grid.link) }"
+          >{{ grid.link }}</a
+        >
+
+        <!-- <a class="nav-link active" aria-current="page" href="/grid1">Grid1</a>
         <a class="nav-link" href="/grid2">Grid2</a>
         <a class="nav-link" href="/grid3">Grid3</a>
-        <a class="nav-link" href="/grid4">Grid4</a>
+        <a class="nav-link" href="/grid4">Grid4</a> -->
       </div>
     </div>
   </div>

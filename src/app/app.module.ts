@@ -8,15 +8,24 @@ import { GridComponent } from './grid/grid.component';
 import { IgxGridModule } from 'igniteui-angular';
 import { HeaderComponent } from './header/header.component';
 import { Grid2Component } from './grid2/grid2.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, GridComponent, HeaderComponent, Grid2Component],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    GridComponent,
+    HeaderComponent,
+    Grid2Component,
+  ],
   imports: [
     BrowserModule,
     HammerModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     IgxGridModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
